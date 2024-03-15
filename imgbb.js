@@ -6,8 +6,8 @@ const fs = require("fs");
 //Передаем адрес изображения при запуске скрипта в качестве параметра
 // node imgbb.js "Путь к изображению"
 
-// const imagePath = process.argv[2];
-const imagePath = "C:\\ahk\\CustomLightShot\\test.jpg";
+const imagePath = process.argv[2];
+//const imagePath = "C:\\ahk\\CustomLightShot\\test.jpg";
 
 // Функция для загрузки фото на imgbb.com
 async function uploadPhoto(apiKey, imagePath) {
