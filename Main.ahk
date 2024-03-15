@@ -16,7 +16,10 @@ FileRecycle % old
 FileMove % filePath, % old
 OnClipboardChange("clipChanged")
 
-^!F10:: ; CTRL-ALT-F10 = Save clipboard image to file
+^#LButton::
+  Send,{PrintScreen}
+  Sleep, 100
+  SoundBeep 400, 200
   If (clipType = "" || clipType = NONTEXT := 2) {
     FileRecycle % filePath
     clipboardToImageFile(filePath)
