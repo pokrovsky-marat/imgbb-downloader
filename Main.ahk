@@ -22,9 +22,10 @@ OnClipboardChange("clipChanged")
     clipboardToImageFile(filePath)
     If FileExist(filePath)
     {
+      ; SoundBeep 400, 200
+      ; Run, node "C:\ahk\CustomLightShot\imgbb.js" 
+      RunWait, node "C:\ahk\CustomLightShot\imgbb.js" , , Hide
       SoundBeep 400, 200
-      Run, node "C:\ahk\CustomLightShot\imgbb.js" 
-      ; Run, node "C:\ahk\CustomLightShot\imgbb.js" filePath
     }
     Else MsgBox 48, Error, File not found.`n`n%filePath%
     } Else MsgBox 48, Error, Clipboard does not contain an image.
