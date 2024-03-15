@@ -27,7 +27,7 @@ OnClipboardChange("clipChanged")
     {
       ; SoundBeep 400, 200
       ; Run, node "C:\ahk\CustomLightShot\imgbb.js" 
-      RunWait, node "C:\ahk\CustomLightShot\imgbb.js" , , Hide
+      RunWait, node "C:\ahk\CustomLightShot\imgbb.js" %filePath% , , Hide
       SoundBeep 400, 200
     }
     Else MsgBox 48, Error, File not found.`n`n%filePath%
