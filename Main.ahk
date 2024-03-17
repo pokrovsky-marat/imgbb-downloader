@@ -16,7 +16,7 @@ FileRecycle % old
 FileMove % filePath, % old
 OnClipboardChange("clipChanged")
 
-^#LButton::
+^`::
   Send,{PrintScreen}
   Sleep, 100
   SoundBeep 400, 200
