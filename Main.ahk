@@ -5,7 +5,7 @@ https://www.autohotkey.com/boards/viewtopic.php?p=502328#p502328
 ------------------------------------------------------------------
 */
 #Requires AutoHotkey v1.1.33
-filePath := A_ScriptDir "\test.jpg" ; Adjust as needed
+filePath := A_ScriptDir "\marat-pokrovsky.jpg" ; Adjust as needed
 ; ----------------------------------------------------
 
 #Include %A_ScriptDir%\Gdip_all.ahk
@@ -18,7 +18,7 @@ OnClipboardChange("clipChanged")
 
 ^`::
   Send,{PrintScreen}
-  Sleep, 100
+  Sleep, 200
   SoundBeep 400, 200
   If (clipType = "" || clipType = NONTEXT := 2) {
     FileRecycle % filePath
@@ -28,7 +28,10 @@ OnClipboardChange("clipChanged")
       ; SoundBeep 400, 200
       ; Run, node "C:\ahk\CustomLightShot\imgbb.js" 
       RunWait, node "C:\ahk\CustomLightShot\imgbb.js" %filePath% , , Hide
-      SoundBeep 400, 200
+      ;Здесь мы вызываем кастомный клипборд, который бикнет и сохранит результат из 
+      ;Клипборда в кастомный клипборд, откуда его можно будет удобно вставить куда надо
+      Send, ^+c
+      ;SoundBeep 400, 200
     }
     Else MsgBox 48, Error, File not found.`n`n%filePath%
     } Else MsgBox 48, Error, Clipboard does not contain an image.
