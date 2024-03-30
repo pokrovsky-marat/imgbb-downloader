@@ -18,7 +18,7 @@ OnClipboardChange("clipChanged")
 
 ^`::
   Send,{PrintScreen}
-  Sleep, 200
+  Sleep, 100
   SoundBeep 400, 200
   If (clipType = "" || clipType = NONTEXT := 2) {
     FileRecycle % filePath

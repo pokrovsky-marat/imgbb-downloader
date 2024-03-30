@@ -33,7 +33,8 @@ async function uploadPhoto(apiKey, imagePath) {
 }
 
 // Замените 'YOUR_API_KEY' на ваш API-ключ от imgbb.com
-const apiKey = "407a655e96bc5e66bf18793c49bc29b1";
+//const apiKey = "407a655e96bc5e66bf18793c49bc29b1";
+const apiKey = "e79707f88012799cf03d930ea3b6617e";
 // Укажите путь к фотографии, которую хотите загрузить
 
 // Загрузка фотографии и вывод результата
